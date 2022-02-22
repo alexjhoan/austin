@@ -1,0 +1,106 @@
+header{
+  div#whatsappBtn {
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    width: auto;
+    padding: 0;
+    z-index: 10;
+    a {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      text-decoration: none;
+      button {
+        -webkit-border-radius: 100%;
+        border-radius: 100%;
+        padding: 0px;
+        border: none;
+        position: relative;
+        z-index: 1;
+        -webkit-animation: brickBtn 6s infinite;
+        animation: brickBtn 6s infinite;
+        img {
+          width: 50px;
+        }
+      }
+      span {
+        background: #DAD7D0;
+        padding: 6px 10px;
+        font-size: 14px;
+        margin-top: -6px;
+      }
+    }
+     button:focus {
+      outline: none;
+    }
+  }
+  div#whatsappBtn a:hover {
+    text-decoration: none;
+    color: var(--text);
+  }
+  @keyframes brickBtn {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    90% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+    91% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    92% {
+      transform: translate(-3px, 0) rotate(1deg);
+    }
+    93% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+    94% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+    95% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    96% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+    97% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+    98% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+    99% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+  }
+}
+
+/*----------------------------Queries-------------------------------*/
+
+@media (max-width: 1399.98px) {}
+
+@media (max-width: 1199.98px) {}
+
+@media (max-width: 991.98px) {}
+
+@media (max-width: 767.98px) {}
+
+@media (max-width: 575.98px) {}
