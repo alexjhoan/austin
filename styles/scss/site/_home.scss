@@ -443,6 +443,25 @@
     }
   }
 }
+/*----------------------------Units Gallery-------------------------------*/
+#unitsGallery {
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  .gallery-thumbs {
+	  margin-top: 30px;
+	  .swiper-slide:hover {
+		  cursor: pointer;
+		}
+	}
+	.gallery-top{
+		.swiper-button-white{
+			&::after{
+				color: $white;
+			}
+		}
+	}
+}
 /*----------------------------Typologies-------------------------------*/
 .typologies{
 	p{
@@ -461,9 +480,9 @@
 	&_imgA1{
 		background-image:linear-gradient(90deg, #00000096 0%, #00000000 60%, #00000000 100%),url(../../assets/images/typologies/dormitorio1.jpg);
 	}
-	// &_imgA2{
-	// 	background-image:linear-gradient(90deg, #00000096 0%, #00000000 60%, #00000000 100%),url(../../assets/images/typologies/monoambientes.jpg);
-	// }
+	&_imgA2{
+		background-image:linear-gradient(90deg, #00000096 0%, #00000000 60%, #00000000 100%),url(../../assets/images/typologies/monoambientes.jpg);
+	}
 	&_text{
     display: flex;
     align-items: center;
@@ -488,16 +507,17 @@
     }
   }
 }
+/*--------------------------------Modal---------------------*/
 #myModal {
   .modal-content {
-    padding: 60px;
+    padding: 60px 80px;
     border-radius: 40px;
     .btn-close {
       color: #005170;
       border: none;
       position: absolute;
-      right: 50px;
-      top: 50px;
+      right: 70px;
+      top: 70px;
       z-index: 2;
     }
     .btn-close:hover, .btn-close:focus, .btn-close:active {
@@ -508,6 +528,9 @@
         box-shadow: none;
     }
     .modal-body{
+    	.swiper{
+ 
+    	}
     	.swiper-wrapper{
     		align-items: center;
 	      .swiper-slide{
@@ -550,19 +573,17 @@
 	        }
 	      }
     	}
-    	.swiper-button-prev{
-		    left: -20px;
-		    color: $text;
+    	.swiper-button-white{
 		    &::after{
           font-size: 40px;
+		   		color: $text;
         }
+    	}
+    	.swiper-button-prev{
+		    left: -30px;
 			}
 			.swiper-button-next {
-		    right: -20px;
-		    color: $text;
-		    &::after{
-          font-size: 40px;
-        }
+		    right: -30px;
 			}
     }
   }
@@ -633,9 +654,17 @@
     height: 300px;
 	}
 }
-@media (max-width: 1399.98px) {}
+@media (max-width: 1399.98px) {
+	#unitsGallery {
+    width: 55%;
+  }
+}
 
-@media (max-width: 1199.98px) {}
+@media (max-width: 1199.98px) {
+	#unitsGallery {
+    width: 100%;
+  }
+}
 
 @media (max-width: 1024px) {
 	.amenities{
@@ -676,6 +705,96 @@
 		}
 		&_mapa {
 
+		}
+	}
+	.typologies{
+		&_imgA{
+			background-size: cover;
+      height: 45vh;
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+		}
+		.swiper-slide {
+      flex-direction: column;
+     }
+    .swiper-button-white{
+    	top: 85%;
+      &::after{
+        font-size: 20px;
+        color: $white;
+      }
+    }
+    .swiper-button-prev {
+      left: auto;
+      right: 90px;
+    }
+    .swiper-button-next {
+      right: 30px;
+    }
+    .btn.btn-primary {
+      padding: 5px 20px;
+    }
+		&_mtext{
+			background-image: url(../../assets/images/typologies/fondo-m.png);
+			height: auto;
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 45px 0;
+		}
+	}
+	#myModal{
+		.modal-content{
+			padding: 20px 40px;
+			border-radius: 30px;
+			.btn-close{
+				top: 30px;
+				right: 30px;
+			}
+			.modal-body{
+				.swiper-wrapper{
+					align-items: baseline;
+					.swiper-slide{
+						grid-template-columns: auto;
+						row-gap: 20px;
+						.col-left{
+							p.h1{
+								font-size: 1.5rem;
+							}
+							p.h5{
+								font-size: 1rem;
+							}
+							p.line{
+								font-size: 0.875rem;
+								padding: 5px 0;
+	    					margin-bottom: 0;	
+							}
+							p.mt-3{
+								font-size: 0.625rem;
+							}
+							.img-left{
+								display: none;
+							}
+						}
+					}
+				}
+				.swiper-button-white{
+					&::after{
+	          font-size: 20px;
+	        }
+				}
+				.swiper-button-prev{
+			    left: -20px;   
+				}
+				.swiper-button-next {
+			    right: -20px;
+				}
+			}
 		}
 	}
 	.amenities{
@@ -747,6 +866,22 @@
         margin-top: -15%;
         z-index: 1;
       }
+		}
+	}
+	#unitsGallery{
+		padding: 0;
+		.container .col-12 {
+	    padding: 0;
+	  }
+		.gallery-thumbs {
+	    display: none;
+	  }
+	  .gallery-top{
+			.swiper-button-white{
+				&::after{
+					font-size: 20px;
+				}
+			}
 		}
 	}
 	.amenities{

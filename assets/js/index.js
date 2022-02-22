@@ -52,6 +52,27 @@ var chart = new Chart(ctx, {
         }
     }
 });
+// ------------------------------Units Gallery-----------------------------
+
+const galleryThumbs = new Swiper('.gallery-thumbs', {
+  spaceBetween: 20,
+  loop: true,
+  slidesPerView: 7,
+  freeMode: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+});
+const galleryTop = new Swiper('.gallery-top', {
+  spaceBetween: 10,
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  thumbs: {
+    swiper: galleryThumbs
+  }
+});
 // ------------------------------My Modal----------------------------
 $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
@@ -65,13 +86,13 @@ const swiperpopup = new Swiper('.swiper-popup', {
   },
 });
 // ----------Swipper Mobile-----------------
-// var stypology = new Swiper('.swiper-typ', {
-//   loop: true,
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-// });
+const swipermobile = new Swiper('.swiper-mpopup', {
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 //-------------------------------- fancyBox----------------------------------
 
 $('[data-fancybox="gallery"]').fancybox({
@@ -79,6 +100,6 @@ $('[data-fancybox="gallery"]').fancybox({
   arrows: true,
   infobar: false,
   buttons: ["zoom", "close"]
-})
+});
 
 // $("#lightgallery .swiper-wrapper").lightGallery();
