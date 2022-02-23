@@ -77,41 +77,40 @@
 			font-weight: 500;
 		}
 	}
-		&_item{
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			margin-bottom: 30px;
-			column-gap: 20px;
-			img{
-				max-width: 19px;
-				width: 100%;
-			}
-			p{
-				margin-bottom: 0;
-			}
-			&.selector{
-        p{
-          color:$black;
-          margin-bottom: 0;
-          font-weight: 700;
-        }
-
-      }
+  &_item{
+	  display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-bottom: 30px;
+		column-gap: 20px;
+		img{
+			max-width: 19px;
+			width: 100%;
 		}
-			&_mybtn{
-				font-weight: 400;
-    		font-size: 1rem;
-    		color: $text;
-    		background-color: $white;
-    		border: none;
-				&:hover, &:focus, &:visited{
-					text-decoration: none;
-			    font-weight: 700;
-			    border: none;
-			    outline: none;
-				}
-			}
+		p{
+			margin-bottom: 0;
+		}
+		&.selector{
+      p{
+        color:$black;
+        margin-bottom: 0;
+        font-weight: 700;
+      }
+    }
+	}
+	&_mybtn{
+		font-weight: 400;
+  	font-size: 1rem;
+  	color: $text;
+  	background-color: $white;
+  	border: none;
+		&:hover, &:focus, &:visited{
+			text-decoration: none;
+	    font-weight: 700;
+	    border: none;
+	    outline: none;
+		}
+	}
 	&_right{
 		position: absolute;
     right: 0;
@@ -133,7 +132,7 @@
       position: absolute;
       max-width: 60px;
       &::after {
-        opacity: 0;
+        opacity: 1;
         position: absolute;
         content: "";
         width: 20px;
@@ -172,7 +171,7 @@
     		top: -27px;
       }
 			b{
-	      opacity: 0;
+        opacity: 1;
 	      background-color: $primary;
 	    }
 			&:first-child{
@@ -197,7 +196,7 @@
     		top: -27px;
       }
 			b{
-				opacity: 0;
+				opacity: 1;
 				background-color: $dark-blue;
 			}
 			&:first-child{
@@ -274,7 +273,7 @@
         background-image: url(../../assets/images/locations/pin-educ.svg);
       }
 			b{
-	      opacity: 0;
+	      opacity: 1;
 	      background-color: $secondary;
 	    }
 			&:first-child{
@@ -305,13 +304,14 @@
 	}
 	.shopping{
 		span{
+      max-width: 80px;
 			&::after {
         background-image: url(../../assets/images/locations/pin-shop.svg);
         top: 35px;
 	    	left: 30px;
       }
 			b{
-	      opacity: 0;
+	      opacity: 1;
 	      background-color: $text;
 	    }
 			&:first-child{
@@ -325,6 +325,7 @@
 .units{
 	background-color: #F7F7F7;
 	padding-top: 100px;
+  margin-top: 50px;
 	p.h4{
 		font-style: italic;
   	font-weight: 300;
@@ -911,16 +912,18 @@
 	}
 	.locations{
 		&_right{
-			position: relative;
-			top: 35px;
+      position: relative;
+      z-index: 1;
+			top: 25px;
 			span{
-      	font-size: 0.4rem;
+       	font-size: 0.4rem;
 			}
 		}
-		&_mapa {
-
-		}
 	}
+  .units {
+    padding-top: 38px;
+    margin-top: -30px;
+  }
 	.typologies{
 		&_imgA{
 			background-size: cover;
@@ -1078,6 +1081,14 @@
 }
 
 @media (max-width: 767.98px) {
+  .locations{
+    &_right{
+      span::after {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
 	.units{
 		&_edif{
 			text-align: center;
@@ -1172,8 +1183,19 @@
 	.descriptions{
 		background-image:url(../../assets/images/descriptions/fdescription-m.png);
 		padding-top: 50px;
-
 	}
+  .locations{
+    &_right{
+      span{
+        max-width: 50px;
+      }
+    }
+    .shopping{
+      span{
+        max-width: 60px;
+      }
+    }
+  }
   .typologies{
     &_mtext{
       margin-top: -85px;
@@ -1237,6 +1259,9 @@
 		&_figure{
 			margin-top: 320px;
 		}
+  }
+  .units {
+    margin-top: 325px;
   }
 }
 @media (max-width: 350px) {
