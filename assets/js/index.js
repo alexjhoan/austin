@@ -102,4 +102,4 @@ $('[data-fancybox="gallery"]').fancybox({
   buttons: ["zoom", "close"]
 });
 
-// $("#lightgallery .swiper-wrapper").lightGallery();
+$("#lightgallery .swiper-wrapper").lightGallery();
