@@ -8,6 +8,7 @@
   padding-top: 150px;
   h1, p{
   	color: $white;
+    font-style: normal;
   }
   h1{
   	font-weight: 600;
@@ -37,7 +38,7 @@
   &_list{
   	p{
 	  	border-bottom: 2px solid $secondary;
-	  	width: 100%;	
+	  	width: 80%;	
 	  	padding: 15px 0;
 	  	margin-bottom: 0;
   	}
@@ -61,7 +62,7 @@
   &_right{
   	flex-direction: column;
   	img{
-  		max-width: 450px;
+  		max-width: 500px;
 	    margin-left: auto;
 	    width: 100%;
 	    margin-top: -50px;
@@ -74,7 +75,6 @@
 		font-weight: 300;
 		span{
 			font-weight: 500;
-			color: $primary;
 		}
 	}
 		&_item{
@@ -588,7 +588,11 @@
     }
   }
 }
+/*----------------------------Advance-------------------------------*/
 .amenities{
+  p.h4{
+    font-weight: 300;
+  }
 	.img-photo{
     position: absolute;
     right: 0;
@@ -641,9 +645,7 @@
       }
       .information {
         .titleFancyBox{
-          font-weight: 400;
           margin-bottom: 27px;
-          color: $text;
         }
       }
     }
@@ -699,6 +701,7 @@
 }
 /*---------------------------Gallery-------------------------------*/
 #gallery{
+  display: none;
   background-color: #F7F7F7;
   padding-bottom: 27px;
   padding-top: 0;
@@ -771,6 +774,7 @@
 		&_list{
 	  	p{
 		  	padding: 10px 0;
+        width: 100%;
 	  	}
 	  }
 		&_footer{
@@ -778,6 +782,9 @@
 		  	justify-content: center;
 		  	column-gap: 15px;
 		  }
+      &_flex:first-child{
+        padding-bottom: 30px;
+      }
   	}
 	}
 	.locations{
@@ -795,7 +802,7 @@
 	.typologies{
 		&_imgA{
 			background-size: cover;
-      height: 45vh;
+      height: 70vh;
       width: 100%;
       background-position: center;
       background-repeat: no-repeat;
@@ -804,7 +811,7 @@
       flex-direction: column;
      }
     .swiper-button-white{
-    	top: 85%;
+    	top: 90%;
       &::after{
         font-size: 20px;
         color: $white;
@@ -821,16 +828,18 @@
       padding: 5px 20px;
     }
 		&_mtext{
-			background-image: url(../../assets/images/typologies/fondo-m.png);
-			height: auto;
-      width: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      padding: 45px 0;
+      justify-content: end;
+      padding-bottom: 45px;
+      position: relative;
+      background-image: url(../../assets/images/typologies/fondo-m.png);
+      height: 53vh;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-top: -146px;
+      background-position-x: center;
 		}
 	}
 	#myModal{
@@ -990,6 +999,11 @@
 			}
 		}
 	}
+  .typologies{
+    &_mtext{
+      margin-top: -115px;
+    }
+  }
 	.amenities{
 		.img-photo {
 	    top: 450px;
@@ -1017,6 +1031,11 @@
 		padding-top: 50px;
 
 	}
+  .typologies{
+    &_mtext{
+      margin-top: -85px;
+    }
+  }
 	.amenities{
 		.img-photo {
 	    top: 500px;

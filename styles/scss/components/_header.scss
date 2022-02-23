@@ -25,6 +25,11 @@ header{
 	  	}		
   	}
   }
+  .navbar{
+    .navbar-nav .nav-link{
+      color: $text;
+    }
+  }
 }
 /*----------------------------Queries-------------------------------*/
 
