@@ -643,10 +643,58 @@
         .titleFancyBox{
           font-weight: 400;
           margin-bottom: 27px;
+          color: $text;
         }
       }
     }
   }
+}
+.advance{
+	background-color: #F7F7F7;
+	padding-bottom: 10px;
+  padding-top: 55px;
+  p.h3{
+  	font-style: italic;
+  	text-align: center;
+    margin-bottom: 35px;
+    font-weight: 800;
+    color: $text;
+  }
+	&_line{
+		img{
+			width: 75%;
+      margin-left: auto;
+      margin-right: auto;			
+		}
+	}
+	&_icons-text{
+		display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 82%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+    .item{
+      text-align: center;
+      img{
+        width: 100%;
+        height: 50px;
+        margin-top: 0;
+        margin-bottom: 0;
+        max-width: 50px;
+      }
+      p{
+      	margin-top: 13px;
+      }
+    }
+    .inic{
+    	width: 25%;
+    }
+    .finish{
+    	width: 22%;
+    	margin-left: auto;
+    }
+	}
 }
 /*----------------------------Queries-------------------------------*/
 @media (min-width: 1200px){
@@ -826,6 +874,21 @@
       }
     }
   }
+  .advance{
+  	&_line{
+			img{
+				width: 70%;	
+			}
+		}
+  	&_icons-text{
+	    .inic{
+	    	width: 46%;
+	    }
+	    .finish{
+	    	width: 40%;
+	    }
+		}
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -908,6 +971,21 @@
 			margin-top: 380px;
 		}
   }
+  .advance{
+  	&_line{
+			img{
+				width: 65%;	
+			}
+		}
+  	&_icons-text{
+	    .inic{
+	    	width: 60%;
+	    }
+	    .finish{
+	    	width: 50%;
+	    }
+		}
+  }
 }
 
 @media (max-width: 425px) {
@@ -917,6 +995,21 @@
 		}
 		&_figure{
 			margin-top: 350px;
+		}
+  }
+  .advance{
+  	&_line{
+			img{
+				width: 55%;	
+			}
+		}
+  	&_icons-text{
+	    .inic{
+	    	width: 85%;
+	    }
+	    .finish{
+	    	width: 70%;
+	    }
 		}
   }
 }
