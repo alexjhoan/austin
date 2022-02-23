@@ -736,6 +736,126 @@
     }
   }
 }
+/*----------------------------Project-------------------------------*/
+.project{
+  text-align: center;
+  p.h4{
+    font-style: italic;
+    font-weight: 300;
+  }
+  &_logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 52px;
+    margin-top: 37px;
+    p {
+      margin-right: 10px;
+    }
+    img {
+      height: 22px;
+    }
+  }
+  &_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    p {
+      margin: 0;
+    }
+    span{
+      color: #377EFF; 
+      font-family:'Roboto';
+      font-style: normal;
+    }
+  }
+}
+/*----------------------------Conatct-------------------------------*/
+.contact {
+  background-image: url(../../assets/images/form/fondo-form.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;  
+  padding: 80px 0;
+    p{
+      color: $white;
+    }
+    p.h5{
+      margin-bottom: 22px;
+    }
+    p.h3 {
+      margin-bottom: 10px;
+    }
+    form#contactForm {
+      margin-bottom: 15px;
+      width: 90%;
+      .form-floating {
+        margin-bottom: 12px;
+        .form-control{
+          border: 1px solid #5CABFF;
+        }
+      }
+    }
+    &_form2{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      a{
+        text-decoration: none;
+      }
+      a img {
+        width: 100%;
+        max-width: 35px;
+        margin-right: 18px;
+      }
+      .whatsapp {
+        font-size: 20px;
+        display: flex;
+        flex-direction: initial;
+        align-items: center;
+        margin-bottom: 20px;
+        color: $white;
+      }
+      .red-socials {
+        display: flex;
+        flex-direction: row;
+        column-gap: 30px;
+      }
+    }
+    #formSending p.strong {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      span{
+        background: $white;
+        height: 6px;
+        width: 6px;
+        border-radius: 100%;
+        margin: 0 3px;
+        animation: sending 1s infinite;
+      }
+      span:first-child {
+        margin-left: 6px;
+      }
+      span:nth-child(2) {
+        animation-delay: 200ms;
+      }
+      span:last-child {
+        animation-delay: 300ms;
+      }
+    }
+  }
+  @keyframes sending {
+  50% {
+    opacity: 0.5
+  }
+  100% {
+    opacity: 1
+  }
+}
 /*----------------------------Queries-------------------------------*/
 @media (min-width: 1200px){
 	.amenities .fancyImgBox .fancyBox .fancyImgItem {
@@ -941,6 +1061,17 @@
       margin-top: 10px;
     }
   }
+  .contact{
+    background-image: url(../../assets/images/form/form-mobile.png);
+    padding: 60px 0;
+    background-position: bottom; 
+    &_form2{
+      margin-top: 20px;
+      .red-socials{
+        flex-direction: column;
+      }
+    }
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -1021,6 +1152,15 @@
       a{
         display: block;
       }
+    }
+  }
+  .project {
+    &_footer {
+      margin-top: 45px;
+      flex-direction: column;
+    }
+    &_footer p:not(:last-child) {
+      margin-bottom: 20px;
     }
   }
 }

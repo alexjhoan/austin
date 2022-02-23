@@ -630,7 +630,7 @@
   </section>
   <section id="gallery">
     <div id="lightgallery" class="wow slideInUp">
-      <a href="assets/images/avance/setiembre_2021_1.jpg">
+<!--       <a href="assets/images/avance/setiembre_2021_1.jpg">
         <img src="assets/images/avance/setiembre_2021_1.jpg" />
         <p class="mb-0">Setiembre 2021</p>
       </a>
@@ -645,7 +645,78 @@
       <a href="assets/images/avance/setiembre_2021_4.jpg">
         <img src="assets/images/avance/setiembre_2021_4.jpg" />
         <p class="mb-0">Setiembre 2021</p>
-      </a>
+      </a> -->
+    </div>
+  </section>
+  <section id="project" class="project">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p class="h4 mb-0">PROYECTO</p>
+          <p class="h2 fw-bold text-center" style="color: #377EFF">DESARROLLADO CON BIG DATA</p>
+          <div class="project_logo">
+            <p class="mb-0">Powered by</p>
+            <img src="assets/icons/logo_infocasas.svg" alt="Austin">
+          </div>
+          <p class="text-center">Tomando como base el análisis de datos del <a href="https://www.infocasas.com.uy/" target="_blank"><u>Portal InfoCasas</u></a>, el proyecto fue concebido en cada uno de sus detalles según la demanda del mercado, abarcando desde la selección del terreno, hasta la composición de unidades y amenities, <span class="fw-bold">para lograr un proyecto innovador, con alta rentabilidad y atractivo tanto al público inversor como residencial.</span></p>
+          <div class="project_footer">
+            <p><span class="h2 fw-bold">10 años</span><br />de datos de <br class="d-none d-md-block">mercado</p>
+            <p><span class="h2 fw-bold">+200.000</span><br />operaciones <br class="d-none d-md-block">analizadas por año</p>
+            <p><span class="h2 fw-bold">+150.000</span><br />propiedades <br class="d-none d-md-block">procesadas por año</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-6 wow fadeInLeft">
+          <p class="h5">SOLICITÁ MÁS INFORMACIÓN</p>
+          <form id="contactForm" class="needs-validation" action="javascript:void(0);" novalidate>
+            <div class="form-floating">
+              <input type="text" class="form-control" placeholder="Nombre" name="name" required>
+              <label for="name">Nombre*</label>
+            </div>
+            <div class="form-floating">
+              <input type="email" class="form-control" placeholder="Email" name="email" required>
+              <label for="email">Email*</label>
+            </div>
+            <div class="form-floating">
+              <input type="tel" class="form-control" placeholder="Teléfono" name="phone" required>
+              <label for="name">Teléfono*</label>
+            </div>
+            <div class="form-floating">
+              <textarea class="form-control" name="consult" style="height: 110px" placeholder="Consulta" required></textarea>
+              <label for="consult">Consulta*</label>
+            </div>
+            <button class="btn btn-primary mt-3" type="submit" onclick="submited()">Enviar</button>
+          </form>
+          <div id="formSending" style="display: none;">
+            <p class="h3 strong">
+              Enviando
+              <span></span>
+              <span></span>
+              <span></span>
+            </p>
+          </div>
+          <div id="formSuccess" style="display: none;">
+            <p class="h3 strong">¡Consulta Enviada!</p>
+          </div>
+          <div id="formError" style="display: none;">
+            <p class="h3 strong">¡Error en el envio de su consulta.<br />Por favor intentar mas tarde!</p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 contact_form2 wow fadeInRight">
+          <p class="mb-0">Oficinas para trato personalizado en Argentina, Uruguay y Paraguay</p>
+          <p class="strong fw-bold mb-3">Coordiná una reunión virtual</p>
+          <a href="#" class="whatsapp strong" target="_blank"><img src="assets/icons/whatsapp.svg">+598 97 509 571</a>
+          <div class="red-socials">
+            <a href="#" class="whatsapp strong" target="_blank"><img src="assets/icons/instagram.svg">@continentsred</a>
+            <a href="#" class="whatsapp strong" target="_blank">@ventus.global</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <footer></footer>
