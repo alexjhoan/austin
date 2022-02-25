@@ -17,7 +17,7 @@
 /*----------------------------Description-------------------------------*/
 .descriptions{
 	background-image: url(../../assets/images/descriptions/fdescription.png);
-	background-size: cover;
+	background-size: 100% 100%;
   background-position: left center;
   background-repeat: no-repeat;
   margin-top: -150px;
@@ -111,12 +111,24 @@
 	    outline: none;
 		}
 	}
-	&_right{
-		position: absolute;
+  &_left{
     right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: -3vh;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+	&_right{
+		position: relative;
+    margin-left: auto;
+    width: 45%;
     z-index: -1;
-    top: -40px;
-    padding: 0;
+    top: -50px;
+    margin-bottom: -50px;
 		span{
 			b{
         padding: 4px 5px 1px 5px;
@@ -156,12 +168,6 @@
         opacity: 1 !important;
       }
     }
-	}
-	&_mapa{
-    max-width: 920px;
-    width: 100%;
-    margin-left: auto;
-    display: block;
 	}
 	.stadiums{
 		span{
@@ -325,7 +331,6 @@
 .units{
 	background-color: #F7F7F7;
 	padding-top: 100px;
-  margin-top: 50px;
 	p.h4{
 		font-style: italic;
   	font-weight: 300;
@@ -864,6 +869,11 @@
 	}
 }
 @media (max-width: 1399.98px) {
+  .locations{
+    &_right{
+      width: 54%;
+    }
+  }
 	#unitsGallery {
     width: 55%;
   }
@@ -881,6 +891,7 @@
 	}
 	.descriptions{
 		padding-top: 100px;
+    margin-bottom: 30px;
 		&_list{
 	  	p{
 		  	padding: 10px 0;
@@ -898,10 +909,16 @@
   	}
 	}
 	.locations{
+    &_left{
+      position: relative;
+      top: 0;
+      padding-bottom: 30px;
+    }
 		&_right{
       position: relative;
-      z-index: 1;
-			top: 25px;
+			width: 100%;
+      top: 0;
+      margin-bottom: 0;
 			span{
        	font-size: 0.4rem;
 			}
@@ -909,7 +926,6 @@
 	}
   .units {
     padding-top: 38px;
-    margin-top: -30px;
   }
 	.typologies{
     padding-bottom: 5px;
@@ -1058,6 +1074,10 @@
 }
 
 @media (max-width: 767.98px) {
+  .descriptions{
+    background-image:url(../../assets/images/descriptions/fdescription-m.png);
+    padding-top: 50px;
+  }
   .locations{
     &_right{
       span::after {
@@ -1149,10 +1169,6 @@
 }
 
 @media (max-width: 575.98px) {
-	.descriptions{
-		background-image:url(../../assets/images/descriptions/fdescription-m.png);
-		padding-top: 50px;
-	}
   .locations{
     &_right{
       span{
