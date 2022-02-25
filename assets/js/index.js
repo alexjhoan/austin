@@ -12,8 +12,87 @@ if (screen.width > 768){
 
 new WOW({offset:offset, scrollContainer: null}).init()
 
+$(".edfLevelUrl").fancybox({
+  overlay : {
+    closeClick : true,
+  }
+});
+
 $('header').load('components/header.html')
 $('footer').load('components/footer.html')
+//----------------------Edif--------------------------------------
+$(window).on('load', function () {
+  $('body').css('opacity', '1');
+
+  $(".edf-mark").on("click touchstart" ,function () {
+    const nameLevel = $(this).data("level")
+    const imgurl = nameLevel.replaceAll(" ", "")
+    $(this).addClass('active').siblings().removeClass("active")
+    $(".edfImgLevel").attr("src",`assets/images/units/plantas/${imgurl}.png`)
+    $(".edfLevelUrl").attr("href",`assets/images/units/plantas/${imgurl}.png`)
+    $("#nameLevel span").text(nameLevel)
+  })
+  $("header .nav-link").click(function (e) {
+    $("header .collapse.show").removeClass("show")
+    const url = $(this).attr("href");
+    if (!url.includes("html") && !url.includes("/")) {
+      e.preventDefault()
+      const section = $(url).offset().top;
+      window.scrollTo({top: section - 65,behavior: "smooth"});
+    }
+  })
+});
+//----------------------Animations-Typologies----------------------------
+$(window).scroll(function () {
+  animations_tipologies_text()
+  tipologies_imgA("#typologies .typologies_imgA1", "Monoambientes")
+  tipologies_imgA("#typologies .typologies_imgA2", "1 Dormitorio")
+})
+
+function animations_tipologies_text(){
+  const container = $('#typologies')
+  const heightElement = $(container).height()
+  const heightTop = $(container).offset().top;
+  const scroll = $(window).scrollTop();
+  if (scroll>heightTop && scroll<(heightTop + (heightElement /2 ))) {
+    $('.typologies_text').css('position', 'fixed')
+    if (scroll > heightTop + (heightElement / 3)) {
+      $(".typologies_text").css({"top": "auto", "bottom": "0" })
+    } else {
+      $(".typologies_text").css({"top": "0", "bottom": "auto" })
+    }
+  } else {
+    $('.typologies_text').css('position', 'absolute')
+  }
+}
+function tipologies_imgA(section, text){
+  const container = $(section);
+  const heightTop = $(container).offset().top;
+  const scroll = $(window).scrollTop();
+  const heightElem = container.height();
+  const move = heightTop - scroll
+  if ((scroll > heightTop) && (scroll < (heightElem + heightTop))) {
+    $(section).css({
+      "background-attachment": "fixed",
+      "background-position-y": move * .15,
+    })
+  } else {
+    $(section).css({
+      "background-attachment": "unset",
+      "background-position-y": 0,
+    })
+  }
+  if ((scroll > (heightTop - (heightElem / 2))) && (scroll < (heightTop + (heightElem / 2)))) {
+    if ($(".titleTextTypology .display-5").text() != text) {
+      $(".titleTextTypology .display-5").fadeOut().promise().done(function () {
+        setTimeout(() => {
+          $(".titleTextTypology .display-5").text(text).show()
+        }, 50);
+      })
+    }
+  }
+}
+
 
 // ------------------------------Locations-----------------------------
 $(".list .locations_item").click(function(){
