@@ -1,6 +1,6 @@
-$(window).on('load', function () {
-  $('body').css('opacity', '1');
-});
+// $(window).on('load', function () {
+//   $('body').css('opacity', '1');
+// });
 
 let offset
 
@@ -24,12 +24,12 @@ $('footer').load('components/footer.html')
 $(window).on('load', function () {
   $('body').css('opacity', '1');
 
-  $(".edf-mark").on("click touchstart" ,function () {
-    const nameLevel = $(this).data("level")
-    const imgurl = nameLevel.replaceAll(" ", "")
+  $(".edf-select").on("click touchstart" ,function () {
+    const nameLevel = (this.id)
     $(this).addClass('active').siblings().removeClass("active")
-    $(".edfImgLevel").attr("src",`assets/images/units/plantas/${imgurl}.png`)
-    $(".edfLevelUrl").attr("href",`assets/images/units/plantas/${imgurl}.png`)
+    console.log(this.id)
+    $('.edfImgLevel').attr('src',`assets/images/units/plantas/${this.id}.png`)
+    $(".edfLevelUrl").attr('href',`assets/images/units/plantas/${this.id}.png`)
     $("#nameLevel span").text(nameLevel)
   })
   $("header .nav-link").click(function (e) {
