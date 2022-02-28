@@ -20,8 +20,7 @@
 	.st14{fill:none;stroke:#377EFB;stroke-width:2;stroke-miterlimit:10;}
 	.st15{fill:#377EFB;stroke:#377EFB;stroke-width:2;stroke-miterlimit:10;}
 	.st16{font-family:'Arial-BoldMT';}
-	.edf-select{opacity:0;}
-	.edf-select.active{opacity:1;}
+	
 </style>
 <g id="edificio_background">
 	<polygon class="st0" points="300.9,61.3 300.9,53.5 361.9,199.2 361.9,215.9 357.1,205.1 357.1,193.2 	"/>
@@ -240,7 +239,7 @@
 	<text transform="matrix(0.6217 4.010906e-02 0.2707 0.9627 168.4807 597.0735)" class="st6 st7 st8">V</text>
 	<text transform="matrix(0.6217 4.010906e-02 0.2707 0.9627 173.1 597.3716)" class="st6 st7 st8">. 8 DE OCTUBRE</text>
 </g>
-<g id="planta_baja" class="edf-select">
+<g id="planta_baja" class="edf-select active">
 	<polygon class="st9" points="158.7,559 158.7,526.5 341.9,521.9 396.1,521.9 396.1,574.4 317.3,584.2 309.6,583.6 309.6,576 
 		251.9,576 160.5,574.2 125.2,577.3 121.9,577.3 122.1,560.5 	"/>
 	<rect id="Rectángulo_41" x="45.4" y="534.1" class="st10" width="91.1" height="21.1"/>

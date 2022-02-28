@@ -22,6 +22,7 @@
   background-repeat: no-repeat;
   margin-top: -150px;
   padding: 150px 0 100px;
+  z-index: 1;
   &_left{
 	  img{
 	  	max-width: 200px;
@@ -126,9 +127,18 @@
 		position: relative;
     margin-left: auto;
     width: 45%;
-    z-index: -1;
+    z-index: 0;
     top: -50px;
     margin-bottom: -50px;
+    .active{
+      span:hover *{
+        opacity: 1;
+        transition: 0.3s ease;
+      }
+      span::after{
+        opacity: 1 !important;
+      }
+    }
 		span{
 			b{
         padding: 4px 5px 1px 5px;
@@ -144,7 +154,7 @@
       position: absolute;
       max-width: 60px;
       &::after {
-        opacity: 1;
+        opacity: 0;
         position: absolute;
         content: "";
         width: 20px;
@@ -158,16 +168,7 @@
         transform: translateY(-3px);
         transition: 0.3s ease;
       }
-		}
-    .active{
-      span:hover *{
-        opacity: 1;
-        transition: 0.3s ease;
-      }
-      span::after{
-        opacity: 1 !important;
-      }
-    }
+		} 
 	}
 	.stadiums{
 		span{
@@ -177,7 +178,7 @@
     		top: -27px;
       }
 			b{
-        opacity: 1;
+        opacity: 0;
 	      background-color: $primary;
 	    }
 			&:first-child{
@@ -202,7 +203,7 @@
     		top: -27px;
       }
 			b{
-				opacity: 1;
+				opacity: 0;
 				background-color: $dark-blue;
 			}
 			&:first-child{
@@ -279,7 +280,7 @@
         background-image: url(../../assets/images/locations/pin-educ.svg);
       }
 			b{
-	      opacity: 1;
+	      opacity: 0;
 	      background-color: $secondary;
 	    }
 			&:first-child{
@@ -317,7 +318,7 @@
 	    	left: 30px;
       }
 			b{
-	      opacity: 1;
+	      opacity: 0;
 	      background-color: $text;
 	    }
 			&:first-child{
@@ -341,13 +342,30 @@
 	    width: 100%;
 		}
 	}
+  .edf-select{
+    opacity:0;
+    cursor: pointer;
+    &.active{
+      opacity:1;
+    }
+    &:not(.active):hover{
+      opacity: 1;
+
+      .st9{
+        stroke: $light-blue;
+        stroke-width: 5px;
+        fill: #0000;
+      }
+
+    }
+  }
 	#nameLevel{
     color: $primary;
     font-weight: 500;
     display: flex;
     justify-content: space-between;
     align-content: center;
-    text-transform: capitalize;
+    // text-transform: capitalize;
     img{
       width: 22px;
       height: auto;
@@ -779,11 +797,10 @@
   }
 }
 /*----------------------------Conatct-------------------------------*/
-//TODO: no puedo posicionar el background de forma correcta en pantallasmayores a 1990
 .contact {
   background-image: url(../../assets/images/form/fondo-form.png);
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;  
   padding: 80px 0;
     p{
@@ -871,7 +888,7 @@
 @media (max-width: 1399.98px) {
   .locations{
     &_right{
-      width: 54%;
+      width: 50%;
     }
   }
 	#unitsGallery {
@@ -1059,7 +1076,6 @@
       margin-top: 10px;
     }
   }
-  //TODO: no puedo posicionar el background de forma correcta
   .contact{
     background-image: url(../../assets/images/form/form-mobile.png);
     padding: 60px 0;
@@ -1167,7 +1183,6 @@
     }
   }
 }
-
 @media (max-width: 575.98px) {
   .locations{
     &_right{
@@ -1197,7 +1212,6 @@
 		}
   }
 }
-
 @media (max-width: 425px) {
   .advance{
   	&_line img{

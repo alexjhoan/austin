@@ -1,6 +1,32 @@
-// $(window).on('load', function () {
-//   $('body').css('opacity', '1');
-// });
+//----------------------Edif--------------------------------------
+$(window).on('load', function () {
+  $('body').css('opacity', '1');
+
+  $(".edf-select").on("click touchstart" ,function () {
+    const nameLevel = this.id.replaceAll('_',' ')
+    const capitalize = nameLevel.slice(0,1).toUpperCase() + nameLevel.slice(1)
+
+    $(this).addClass('active').siblings().removeClass("active")
+    console.log(this.id)
+    $('.edfImgLevel').attr('src',`assets/images/units/plantas/${this.id}.png`)
+    $(".edfLevelUrl").attr('href',`assets/images/units/plantas/${this.id}.png`)
+    if (this.id == "planta_baja") {
+      $("#nameLevel span").text("Planta Baja")
+    } else {
+      $("#nameLevel span").text(capitalize)
+    }
+    
+  })
+  $("header .nav-link").click(function (e) {
+    $("header .collapse.show").removeClass("show")
+    const url = $(this).attr("href");
+    if (!url.includes("html") && !url.includes("/")) {
+      e.preventDefault()
+      const section = $(url).offset().top;
+      window.scrollTo({top: section - 65,behavior: "smooth"});
+    }
+  })
+});
 
 let offset
 
@@ -20,28 +46,7 @@ $(".edfLevelUrl").fancybox({
 
 $('header').load('components/header.html')
 $('footer').load('components/footer.html')
-//----------------------Edif--------------------------------------
-$(window).on('load', function () {
-  $('body').css('opacity', '1');
 
-  $(".edf-select").on("click touchstart" ,function () {
-    const nameLevel = (this.id)
-    $(this).addClass('active').siblings().removeClass("active")
-    console.log(this.id)
-    $('.edfImgLevel').attr('src',`assets/images/units/plantas/${this.id}.png`)
-    $(".edfLevelUrl").attr('href',`assets/images/units/plantas/${this.id}.png`)
-    $("#nameLevel span").text(nameLevel)
-  })
-  $("header .nav-link").click(function (e) {
-    $("header .collapse.show").removeClass("show")
-    const url = $(this).attr("href");
-    if (!url.includes("html") && !url.includes("/")) {
-      e.preventDefault()
-      const section = $(url).offset().top;
-      window.scrollTo({top: section - 65,behavior: "smooth"});
-    }
-  })
-});
 //----------------------Animations-Typologies----------------------------
 $(window).scroll(function () {
   animations_tipologies_text()
@@ -101,7 +106,7 @@ $(".list .locations_item").click(function(){
   $(this).addClass("selector").siblings().removeClass("selector")
   });
 
-$(".mybtn").click(function(){
+$(".locations_mybtn").click(function(){
   $("locations_right div").addClass("active").siblings().removeClass("selector")
 });
 //----------------------------------------My-Chart-----------------------------
@@ -164,7 +169,7 @@ const swiperpopup = new Swiper('.swiper-popup', {
     prevEl: '.swiper-button-prev',
   },
 });
-// ----------Swipper Mobile-----------------
+// ----------Swipper Mobile Modal-----------------
 const swipermobile = new Swiper('.swiper-mpopup', {
   loop: true,
   navigation: {
