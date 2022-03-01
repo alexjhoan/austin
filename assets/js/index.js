@@ -19,9 +19,9 @@ $(window).on('load', function () {
   })
   $("header .nav-link").click(function (e) {
     $("header .collapse.show").removeClass("show")
-    const url = $(this).attr("href");
+    const url = $(this).attr("href").slice(1);
     const header = $("header").height()
-    if (!url.includes("html") && !url.includes("/")) {
+    if (!url.includes("html")) {
       e.preventDefault()
       const section = $(url).offset().top;
       window.scrollTo({top: section - header,behavior: "smooth"});
