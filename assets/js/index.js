@@ -20,10 +20,11 @@ $(window).on('load', function () {
   $("header .nav-link").click(function (e) {
     $("header .collapse.show").removeClass("show")
     const url = $(this).attr("href");
+    const header = $("header").height()
     if (!url.includes("html") && !url.includes("/")) {
       e.preventDefault()
       const section = $(url).offset().top;
-      window.scrollTo({top: section - 65,behavior: "smooth"});
+      window.scrollTo({top: section - header,behavior: "smooth"});
     }
   })
 });
@@ -102,13 +103,15 @@ function tipologies_imgA(section, text){
 // ------------------------------Locations-----------------------------
 $(".list .locations_item").click(function(){
   let type = $(this).data("type")
-  $(`.${type}`).addClass("active").siblings().removeClass("active")
-  $(this).addClass("selector").siblings().removeClass("selector")
-  });
 
-$(".locations_mybtn").click(function(){
-  $("locations_right div").addClass("active").siblings().removeClass("selector")
+  if (type != "all") {
+    $(`.${type}`).addClass("active").siblings().removeClass("active")
+    $(this).addClass("selector").siblings().removeClass("selector")    
+  } else {
+    $('.locations_right div').addClass("active")
+  }
 });
+
 //----------------------------------------My-Chart-----------------------------
 var ctx = document.getElementById('myChart').getContext('2d');
 var chart = new Chart(ctx, {
