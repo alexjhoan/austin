@@ -7,7 +7,6 @@ $(window).on('load', function () {
     const capitalize = nameLevel.slice(0,1).toUpperCase() + nameLevel.slice(1)
 
     $(this).addClass('active').siblings().removeClass("active")
-    console.log(this.id)
     $('.edfImgLevel').attr('src',`assets/images/units/plantas/${this.id}.png`)
     $(".edfLevelUrl").attr('href',`assets/images/units/plantas/${this.id}.png`)
     if (this.id == "planta_baja") {
@@ -18,13 +17,15 @@ $(window).on('load', function () {
     
   })
   $("header .nav-link").click(function (e) {
+    e.preventDefault()
     $("header .collapse.show").removeClass("show")
-    const url = $(this).attr("href").slice(1);
+    const url = $(this).attr("href")
     const header = $("header").height()
     if (!url.includes("html")) {
-      e.preventDefault()
-      const section = $(url).offset().top;
+      const section = $(url.slice(1)).offset().top;
       window.scrollTo({top: section - header,behavior: "smooth"});
+    } else{
+      window.location = url
     }
   })
 });
@@ -51,8 +52,8 @@ $('footer').load('components/footer.html')
 //----------------------Animations-Typologies----------------------------
 $(window).scroll(function () {
   animations_tipologies_text()
-  tipologies_imgA("#typologies .typologies_imgA1", "Monoambientes")
-  tipologies_imgA("#typologies .typologies_imgA2", "1 Dormitorio")
+  tipologies_imgA("#typologies .typologies_imgA1", "MONOAMBIENTES")
+  tipologies_imgA("#typologies .typologies_imgA2", "1 DORMITORIO")
 })
 
 function animations_tipologies_text(){
