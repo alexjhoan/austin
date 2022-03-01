@@ -33,8 +33,9 @@
   p{
   	color: $white;
   }
-  p.h3 {
+  p.h2 {
     margin-top: 100px;
+    font-style: normal;
 	}
   &_list{
   	p{
@@ -669,6 +670,7 @@
       .information {
         .titleFancyBox{
           margin-bottom: 27px;
+          font-size: 18px;
         }
       }
     }
@@ -818,7 +820,7 @@
       .form-floating {
         margin-bottom: 12px;
         .form-control{
-          border: 1px solid #5CABFF;
+          border: 2px solid #5CABFF;
         }
       }
     }
