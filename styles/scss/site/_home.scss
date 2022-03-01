@@ -170,7 +170,7 @@
     		top: -27px;
       }
 			b{
-        opacity: 0;
+        opacity: 1;
 	      background-color: $primary;
 	    }
 			&:first-child{
@@ -195,7 +195,7 @@
     		top: -27px;
       }
 			b{
-				opacity: 0;
+				opacity: 1;
 				background-color: $dark-blue;
 			}
 			&:first-child{
@@ -272,7 +272,7 @@
         background-image: url(../../assets/images/locations/pin-educ.svg);
       }
 			b{
-	      opacity: 0;
+	      opacity: 1;
 	      background-color: $secondary;
 	    }
 			&:first-child{
@@ -310,7 +310,7 @@
 	    	left: 30px;
       }
 			b{
-	      opacity: 0;
+	      opacity: 1;
 	      background-color: $text;
 	    }
 			&:first-child{
@@ -1093,6 +1093,98 @@
         height: 15px;
       }
     }
+    .stadiums{
+      span{
+        &::after {
+          right: 24px;
+          top: -20px;
+        }
+        &:first-child{
+          bottom: 49%;
+          left: 31%;
+        }
+      }
+    }
+    .hospitals{
+      span{
+        &::after {
+          left: 20px;
+          top: -20px;
+        }
+        &:first-child{
+          &::after {
+            right: -18px;
+          }
+          left: 12%;
+        }
+        &:nth-child(2){
+          &::after {
+            left: -18px;
+          }
+          left: 25%;
+        }
+        &:nth-child(3){
+          &::after {
+            left: -18px;
+          }
+          left: 22%;
+        }
+        &:nth-child(4){
+          &::after {
+            left: -18px;
+          }
+          left: 18%;
+        }
+        &:nth-child(8){
+          &::after {
+            left: 25px;
+          }
+        }
+        &:nth-child(9){
+          &::after {
+            left: 9px;
+          }
+          right: 23%;
+        }
+        &:last-child{
+          right: 12%;
+        }
+      }
+    }
+    .education{
+      span{
+        &:first-child{
+          &::after {
+            top: 26px;
+            left: 23px;
+          }
+          bottom: 37%;
+        }
+        &:nth-child(2){
+          &::after {
+            top: -20px;
+            left: 22px;
+          }
+          bottom: 30.5%;
+        }
+        &:last-child{
+          &::after {
+            top: 4px;
+            right: -18px;
+          }
+        }
+      }
+    }
+    .shopping{
+      span{
+        &::after {
+          top: 28px;
+        }
+        &:first-child{
+          bottom: 15%;
+        }
+      }
+    }
   }
 	.units{
 		&_edif{
@@ -1217,5 +1309,78 @@
 	    	width: 70%;
 	    }
 		}
+  }
+}
+@media (max-width: 375px){
+  .locations{
+    &_right{
+      .stadiums{
+        span{
+          &:first-child{
+            bottom: 44%;
+            left: 32%;
+          }
+        }
+      }
+      .hospitals{
+        span{
+          &:first-child{
+            left: 8.5%;
+          }
+          &:nth-child(2){
+            left: 27%;
+          }
+          &:nth-child(3){
+            left: 24%;
+          }
+          &:nth-child(4){
+            left: 21%;
+          }
+          &:nth-child(7){
+            bottom: 10%;
+          }
+          &:nth-child(8){
+            top: 24%;
+            right: 29%;
+          }
+          &:nth-child(9){
+            right: 21%;
+            top: 30%;
+          }
+          &:last-child{
+            right: 10%;
+            top: 31%;
+          }
+        }
+      }
+      .education{
+        span{
+          &:first-child{
+            &::after {
+              top: 22px;
+              left: 15px;
+            }
+            bottom: 39%;
+            left: 25%;
+          }
+          &:nth-child(2){
+            &::after {
+              left: 15px;
+            }
+            bottom: 27%;
+          }
+          &:last-child{
+            left: 36%;
+          }
+        }
+      }
+      .shopping{
+        span{
+          &:first-child{
+            left: 0%;
+          }
+        }
+      }
+    }
   }
 }
