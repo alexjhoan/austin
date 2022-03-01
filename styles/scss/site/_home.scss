@@ -170,7 +170,7 @@
     		top: -27px;
       }
 			b{
-        opacity: 1;
+        opacity: 0;
 	      background-color: $primary;
 	    }
 			&:first-child{
@@ -195,7 +195,7 @@
     		top: -27px;
       }
 			b{
-				opacity: 1;
+				opacity: 0;
 				background-color: $dark-blue;
 			}
 			&:first-child{
@@ -272,7 +272,7 @@
         background-image: url(../../assets/images/locations/pin-educ.svg);
       }
 			b{
-	      opacity: 1;
+	      opacity: 0;
 	      background-color: $secondary;
 	    }
 			&:first-child{
@@ -310,7 +310,7 @@
 	    	left: 30px;
       }
 			b{
-	      opacity: 1;
+	      opacity: 0;
 	      background-color: $text;
 	    }
 			&:first-child{
@@ -929,7 +929,7 @@
       top: 0;
       margin-bottom: 0;
 			span{
-       	font-size: 0.4rem;
+       	font-size: calc(6px + 0.6vw);
 			}
 		}
 	}
