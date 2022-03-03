@@ -28,6 +28,7 @@ header{
   .navbar{
     .navbar-nav .nav-link{
       color: $text;
+      padding-left: 2rem !important;
     }
   }
 }
@@ -56,7 +57,7 @@ header{
         width: 100%;
       }
       .nav-item{
-        border-bottom: 1px solid $text;
+        border-bottom: 1px solid #b7b1a5;
         width: 100%;
         padding: 0 30px;
       }
