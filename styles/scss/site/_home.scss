@@ -948,6 +948,15 @@
 			span{
        	font-size: calc(6px + 0.6vw);
 			}
+      .education {
+        span:last-child {
+          &::after{
+            right: -45px;
+          }
+          left: 42%;
+        }
+
+      }
 		}
 	}
   .units {
@@ -1193,6 +1202,7 @@
             top: 9px;
             right: -35px;
           }
+          left: 40.5%;
         }
       }
     }
