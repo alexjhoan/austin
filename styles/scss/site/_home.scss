@@ -884,6 +884,14 @@
   }
 }
 /*----------------------------Queries-------------------------------*/
+@media (min-width: 1600px){
+  .amenities1 {
+    &_right{
+      background-position: center;
+      background-size: 100%;
+    }
+  }
+}
 @media (min-width: 1200px){
 	.amenities .fancyImgBox .fancyBox .fancyImgItem {
     height: 300px;
