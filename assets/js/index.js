@@ -100,17 +100,17 @@ function tipologies_imgA(section, text){
   }
 }
 
-
 // ------------------------------Locations-----------------------------
 $(".list .locations_item").click(function(){
   let type = $(this).data("type")
-
+  $(this).addClass("selector").siblings().removeClass("selector") 
   if (type != "all") {
     $(`.${type}`).addClass("active").siblings().removeClass("active")
-    $(this).addClass("selector").siblings().removeClass("selector")    
+       
   } else {
     $('.locations_right div').addClass("active")
   }
+  
 });
 
 //----------------------------------------My-Chart-----------------------------
@@ -130,7 +130,6 @@ var chart = new Chart(ctx, {
             data: [14,86],
         }]
     },
-
     // Configuration options go here
     options: {
       cutoutPercentage: 65,
