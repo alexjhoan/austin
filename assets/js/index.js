@@ -52,8 +52,8 @@ $('footer').load('components/footer.html')
 //----------------------Animations-Typologies----------------------------
 $(window).scroll(function () {
   animations_tipologies_text()
-  tipologies_imgA("#typologies .typologies_imgA1", "MONOAMBIENTES")
-  tipologies_imgA("#typologies .typologies_imgA2", "1 DORMITORIO")
+  tipologies_imgA("#typologies .typologies_imgA1", "1 DORMITORIO")
+  tipologies_imgA("#typologies .typologies_imgA2", "MONOAMBIENTES")
 })
 
 function animations_tipologies_text(){

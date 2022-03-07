@@ -51,10 +51,10 @@
               <p>Terraza de Amenities</p>
             </div>
             <div class="col-12 py-4">
-              <a href="assets/Brochure Austin.pdf" target="_blank" class="btn btn-primary">Descargar Brochure</a>
+              <a href="assets/Brochure Austin.pdf" target="_blank" class="btn btn-primary">Descargar brochure</a>
             </div>
           </div>
-          <div class="row descriptions_footer mt-2">
+          <div class="row descriptions_footer">
             <div class="col-lg-6 col-12 descriptions_footer_flex">
               <p>DESARROLLA</p>
               <img src="assets/icons/logo-continents-blanco.svg" alt="Austin">
@@ -105,7 +105,7 @@
     <div class="locations_right">
       <img src="assets/images/locations/mapa.png" alt="Austin" class="locations_mapa">
       <div class="active stadiums">
-        <span><b>ESTADIO PARQUE CENTRAL</b></span>
+        <span><b>ESTADIO GRAN PARQUE CENTRAL</b></span>
         <span><b>PARQUE BATLLE</b></span>
         <span><b>ESTADIO CENTENARIO</b></span>
       </div>
@@ -117,7 +117,7 @@
         <span><b>HOSPITAL MILITAR</b></span>
         <span><b>SMI</b></span>
         <span><b>HOSPITAL MANUEL QUINTELA</b></span> 
-        <span style="max-width: 85px"><b>INST. NACIONAL<br>DEL CANCER</b></span>
+        <span><b>INSTITUTO NACIONAL<br>DEL CÁNCER</b></span>
         <span><b>CASMU</b></span>
         <span><b>HOSPITAL EVÁNGELICO</b></span>
       </div>
@@ -174,11 +174,11 @@
         <div class="units_progress"></div>
       </div>
       <div class="row align-items-sm-center units_tecno">
-        <div class="col-12 col-md-6 units_flex-tecno">
-          <img src="assets/images/tecno/tecno1.png" alt="Vista App Smart Home Control" class="img-fluid wow fadeInLeft delay-2s">
-          <img src="assets/images/tecno/tecno2.png" alt="Telefono Movil en la mano" class="img-fluid wow fadeInLeft delay-1s">
-          <img src="assets/images/tecno/tecno3.png" alt="Vista manilla de puerta inteligente" class="img-fluid wow fadeInLeft delay-500ms">
-          <img src="assets/images/tecno/tecno4.png" alt="Robot aspiradora" class="img-fluid wow fadeInLeft">
+        <div class="col-12 col-md-6 units_flex-tecno  wow fadeInLeft">
+          <img src="assets/images/tecno/tecno1.png" alt="Vista App Smart Home Control" class="img-fluid">
+          <img src="assets/images/tecno/tecno2.png" alt="Telefono Movil en la mano" class="img-fluid">
+          <img src="assets/images/tecno/tecno3.png" alt="Vista manilla de puerta inteligente" class="img-fluid">
+          <img src="assets/images/tecno/tecno4.png" alt="Robot aspiradora" class="img-fluid">
         </div>
         <div class="col-md-6 col-12 wow fadeInRight">
           <p class="h2 mb-0">TECNOLOGÍA</p>
@@ -421,7 +421,7 @@
             <div class="row">
               <div class="col-12">
                 <p class="h4" style="font-weight: 300">APARTAMENTOS</p>
-                <p class="animated slideInUp display-5" style="font-weight: 800">MONOAMBIENTES</p>
+                <p class="animated slideInUp display-5" style="font-weight: 800">1 DORMITORIO</p>
                 <button id="myBtn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Ver tipologías</button>
               </div>
             </div>
@@ -435,7 +435,7 @@
               <div class="row">
                 <div class="col-12">
                   <p class="h4" style="font-weight: 300">APARTAMENTOS</p>
-                  <p class="animated slideInUp display-5" style="font-weight: 800">1 DORMITORIO</p>
+                  <p class="animated slideInUp display-5" style="font-weight: 800">MONOAMBIENTES</p>
                   <button id="myBtn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Ver tipologías</button>
                 </div>
               </div>
@@ -521,7 +521,7 @@
     </div>
   </section>
   <section id="amenities1" class="amenities1"> 
-    <div class="container">
+    <div class="container amenities1_left">
       <div class="row">
         <div class="col-lg-6 col-12 wow fadeInLeft">
           <p class="h4 mb-0">VIVÍ LAS MEJORES</p>
@@ -530,11 +530,12 @@
           <p class="mt-4">Austin te ofrece diversos espacios para que disfrutes de tu tiempo libre, de trabajo, esparcimiento, y para tu cuidado personal. Para una mayor productividad, te proponemos un espacio de co-work y sala de juegos, completamente equipado, para que trabajes con el mejor confort y rindas al máximo: charging station, coffee station, mesa de trabajo multifuncional (adaptable a mesa de pool o ping pong), biblioteca de juegos de mesa, entre otros.</p>
           <p>En el rooftop vas a encontrar un gimnasio con aparatos biosaludables que te permitirá hacer tu rutina de ejercicios al aire libre con una vista panorámica de la ciudad. También contará con dos parrilleros de techo retráctil, ideales para pasar buenos momentos con familia o amigos.</p>
         </div>
-        <div class="col-lg-6 amenities1_right wow fadeInRight">
-          <img src="assets/images/amenities/foto-amenities-d.png" alt="Austin" class="img-photo d-lg-block d-none">
-          <img src="assets/images/amenities/foto-amenities-m.jpg" alt="Austin" class="img-photo d-lg-none d-block">
-        </div>
+
       </div>
+    </div>
+    <div class="amenities1_right wow fadeInRight">
+<!--       <img src="assets/images/amenities/foto-amenities-d.png" alt="Austin" class="img-photo d-lg-block d-none"> -->
+      <img src="assets/images/amenities/foto-amenities-m.jpg" alt="Austin" class="img-photo d-lg-none d-block">
     </div>
   </section>
   <section id="amenities" class="amenities">
@@ -623,11 +624,11 @@
           <div class="advance_icons-text">
             <div class="item inic">
               <img src="assets/images/advance/inicio-obra.svg" alt="Austin">
-              <p>Inicio de obra<br><span class="fw-bold">Julio 2022</span></p>
+              <p class="mb-0">Inicio de obra<br><span class="fw-bold">Julio 2022</span></p>
             </div>
             <div class="item finish">
               <img src="assets/images/advance/entrega.svg" alt="Austin">
-              <p>Entrega<br><span class="fw-bold">Junio 2024</span></p>
+              <p class="mb-0">Entrega<br><span class="fw-bold">Junio 2024</span></p>
             </div>
           </div>
         </div>
@@ -659,7 +660,7 @@
       <div class="row">
         <div class="col-12">
           <p class="h4 mb-0 wow fadeInDown">PROYECTO</p>
-          <p class="h2 fw-bold text-center wow fadeInDown" style="color: #377EFF">DESARROLLADO CON BIG DATA</p>
+          <p class="h2 fw-bold text-center wow fadeInDown" style="color: #377EFF">DESARROLLADO<br>CON BIG DATA</p>
           <div class="project_logo wow fadeInDown">
             <p class="mb-0">Powered by</p>
             <img src="assets/icons/logo_infocasas.svg" alt="Austin">
@@ -719,7 +720,6 @@
           <a href="https://api.whatsapp.com/send?phone=59897509571&text=Hola!%20Me%20gustar%C3%ADa%20tener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Austin" class="whatsapp fw-bold" target="_blank"><img src="assets/icons/whatsapp.svg">+598 97 509 571</a>
           <div class="red-socials">
             <a href="https://www.instagram.com/continentsred" class="whatsapp fw-bold" target="_blank"><img src="assets/icons/instagram.svg">@continentsred</a>
-            <a href="#" class="whatsapp fw-bold" target="_blank">@ventus.global</a>
           </div>
         </div>
       </div>
