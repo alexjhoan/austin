@@ -1,7 +1,9 @@
 :root{
   font-size: 16px;
 }
-
+html{
+  overflow-x: hidden;
+}
 body{
   opacity: 0;
   overflow-x: hidden;

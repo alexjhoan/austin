@@ -52,8 +52,8 @@ $('footer').load('components/footer.html')
 //----------------------Animations-Typologies----------------------------
 $(window).scroll(function () {
   animations_tipologies_text()
-  tipologies_imgA("#typologies .typologies_imgA1", "MONOAMBIENTES")
-  tipologies_imgA("#typologies .typologies_imgA2", "1 DORMITORIO")
+  tipologies_imgA("#typologies .typologies_imgA1", "1 DORMITORIO")
+  tipologies_imgA("#typologies .typologies_imgA2", "MONOAMBIENTES")
 })
 
 function animations_tipologies_text(){
@@ -100,17 +100,17 @@ function tipologies_imgA(section, text){
   }
 }
 
-
 // ------------------------------Locations-----------------------------
 $(".list .locations_item").click(function(){
   let type = $(this).data("type")
-
+  $(this).addClass("selector").siblings().removeClass("selector") 
   if (type != "all") {
     $(`.${type}`).addClass("active").siblings().removeClass("active")
-    $(this).addClass("selector").siblings().removeClass("selector")    
+       
   } else {
     $('.locations_right div').addClass("active")
   }
+  
 });
 
 //----------------------------------------My-Chart-----------------------------
@@ -130,7 +130,6 @@ var chart = new Chart(ctx, {
             data: [14,86],
         }]
     },
-
     // Configuration options go here
     options: {
       cutoutPercentage: 65,

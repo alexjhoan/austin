@@ -1,5 +1,5 @@
 .footer {
-  background-color: #F7F7F7;
+  background-color: #e5e3df;
   padding-top: 150px;
   padding-bottom: 88px;
   margin-top: -70px;
@@ -23,6 +23,9 @@
   }
   &_privacyText {
     text-align: center;
+    p{
+      font-size: 0.8rem;
+    }
   }
 }
 /*----------------------------Queries-------------------------------*/
