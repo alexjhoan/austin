@@ -26,19 +26,25 @@ header{
   	}
   }
   .navbar{
-    .navbar-nav .nav-link{
-      color: $text;
-      padding-left: 2rem !important;
+    .navbar-nav {
+      .nav-link{
+        color: $text;
+      }
     }
   }
 }
 /*----------------------------Queries-------------------------------*/
 
-@media (max-width: 1399.98px) {}
+@media (min-width: 992px) {
+  header{
+    .navbar .navbar-nav .nav-item{
+      margin: 0 8px;
+    }
+  }
+}
 
-@media (max-width: 1199.98px) {}
 
-@media (max-width: 991.98px) {
+@media (max-width: 991px) {
   header{
     img {
       max-width: 100px;
@@ -65,17 +71,21 @@ header{
   }
 }
 
-@media (max-width: 767.98px) {}
-
-@media (max-width: 575.98px) {
-  header{
+@media (max-width: 767.98px) {
+    header{
     .navbar{
       .nav-item{
         padding: 0;
         .nav-link{
-          padding-left: 1rem !important;
+          max-width: 540px;
+          margin: 0 auto;
+          padding-left: 12px;
+          padding-right: 12px;
         }
       }
     }
   }
+}
+
+@media (max-width: 575.98px) {
 }
