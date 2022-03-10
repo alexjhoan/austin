@@ -26,10 +26,8 @@ header{
   	}
   }
   .navbar{
-    .navbar-nav {
-      .nav-link{
-        color: $text;
-      }
+    .navbar-nav .nav-link{
+      color: $text;
     }
   }
 }
@@ -42,7 +40,6 @@ header{
     }
   }
 }
-
 
 @media (max-width: 991px) {
   header{
