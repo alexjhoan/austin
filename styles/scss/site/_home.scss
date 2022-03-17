@@ -506,10 +506,10 @@
     width: 100%;
 	}
 	&_imgA1{
-		background-image:linear-gradient(90deg, #00000096 0%, #00000000 60%, #00000000 100%),url(../../assets/images/typologies/dormitorio1.jpg);
+		background-image:url(../../assets/images/typologies/dormitorio1.jpg);
 	}
 	&_imgA2{
-		background-image:linear-gradient(90deg, #00000096 0%, #00000000 60%, #00000000 100%),url(../../assets/images/typologies/monoambientes.jpg);
+		background-image:url(../../assets/images/typologies/monoambientes.jpg);
 	}
 	&_text{
     display: flex;
@@ -539,6 +539,20 @@
       overflow: hidden;
     }
   }
+  &_download {
+    margin-top: 15px;
+    position: relative;
+    .tipo_down {
+      width: 15px;
+      margin-right: 10px;
+    }
+    a{
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      color: $white;
+    }
+  }
 }
 /*--------------------------------Modal---------------------*/
 #myModal {
@@ -564,7 +578,7 @@
     	.swiper-wrapper{
 	      .swiper-slide{
 	        display: grid;
-	        grid-template-columns: 45% auto;
+	        grid-template-columns: 40% auto;
 	        column-gap: 35px;
 	        .col-left{
 	        	p.h1{
@@ -593,13 +607,19 @@
 	        }
 	        .col-right{
 	          display: flex;
-	          flex-direction: column;
-	          align-items: center;
-	          justify-content: center;
+	          flex-direction: row;
+	          align-items: flex-start;
+            justify-content: center;
+            margin-top: auto;
+            margin-bottom: auto;
 	          .img-right {
 	            width: 100%;
-	            max-width: 450px;
+	            max-width: 430px;
 	          }
+            .img-rightB{
+              width: 25px;
+              margin-left: 20px;
+            }
 	        }
 	      }
     	}
@@ -1058,6 +1078,14 @@
 								display: none;
 							}
 						}
+            .col-right{
+              .img-right {
+                max-width: 350px;
+              }
+              .img-rightB{
+                margin-left: 10px;
+              }
+            }
 					}
 				}
 				.swiper-button-white{
