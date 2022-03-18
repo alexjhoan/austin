@@ -638,7 +638,7 @@
     }
   }
 }
-/*----------------------------Advance-------------------------------*/
+/*----------------------------Amenities-------------------------------*/
 .amenities1{
   background-color: #F7F7F7;
   display: flex;
@@ -1015,7 +1015,7 @@
       flex-direction: column;
      }
     .swiper-button-white{
-    	top: 92%;
+    	top: 95%;
       &::after{
         font-size: 20px;
         color: $white;
@@ -1035,10 +1035,10 @@
       display: flex;
       flex-direction: column;
       justify-content: end;
-      padding-bottom: 40px;
+      padding-bottom: 20px;
       position: relative;
       background-image: url(../../assets/images/typologies/fondo-m.png);
-      height: 35vh;
+      height: 350px;
       width: 100%;
       background-repeat: no-repeat;
       background-size: cover;
@@ -1103,7 +1103,7 @@
 		}
 	}
   #unitsGallery {
-    padding-bottom: 50px;
+    padding-bottom: 30px;
   }
   .amenities1 {
     padding-bottom: 0;
@@ -1313,7 +1313,11 @@
 		}
 	}
   .typologies{
+    .swiper-button-white{
+      top: 94.8%;
+    }
     &_mtext{
+      height: 300px;
       margin-top: -130px;
     }
   }
@@ -1413,6 +1417,7 @@
       }
     }
   }
+
   .advance{
   	&_line{
 			img{
@@ -1500,6 +1505,15 @@
           }
         }
       }
+    }
+  }
+  .typologies{
+    .swiper-button-white{
+      top: 94%;
+    }
+    &_mtext{
+      height: 250px;
+      margin-top: -130px;
     }
   }
   .advance{
