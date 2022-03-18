@@ -1433,6 +1433,18 @@
 	    }
 		}
   }
+  .typologies{
+    .swiper-button-prev {
+      right: 55px;
+    }
+    .swiper-button-next {
+      right: 5px;
+    }
+  }
+  .contact form#contactForm {
+    width: 100%;
+  }
+
 }
 @media (max-width: 425px) {
    .locations{
