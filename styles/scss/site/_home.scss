@@ -349,6 +349,7 @@
     cursor: pointer;
     &.active{
       opacity:1;
+      pointer-events: none;
     }
     &:not(.active):hover{
       opacity: 1;
@@ -357,7 +358,6 @@
         stroke-width: 5px;
         fill: #0000;
       }
-
     }
   }
 	#nameLevel{
