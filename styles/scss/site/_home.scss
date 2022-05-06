@@ -1417,7 +1417,6 @@
       }
     }
   }
-
   .advance{
   	&_line{
 			img{
@@ -1447,7 +1446,7 @@
 
 }
 @media (max-width: 425px) {
-   .locations{
+  .locations{
     &_right{
       span{
         max-width: 50px;
