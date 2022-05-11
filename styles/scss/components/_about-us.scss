@@ -33,6 +33,108 @@
     margin-bottom: 80px;
   }
 }
+/*-----------------------------About-Projects----------------------------*/
+.projects{
+  .line_mayor{
+    margin-top: 30px;
+    width: 100%;
+    border-bottom: 1px solid #B7B1A6;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 25px;
+    p.h2{
+      font-family: 'Roboto';
+      color: #494846;
+    }
+    img{
+      max-width: 30px;
+      width: 100%;
+      margin-right: 17px;
+    }
+  }
+  a{
+    text-decoration: none;
+    &:hover{
+      .contentImg img {
+        transform: scale(1.07);
+      }
+    }
+  }
+  .tam_proj {
+    padding: 0 10px;
+  }
+  .contentImg {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    max-height: 358px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    box-shadow: 4px 4px 6px #00000029;
+    img {
+      width: 100%;
+      transition: all .5s ease;
+      height: 354.66px;
+    }
+  }
+  .band_projects{
+    width: 40px;
+    padding-right: 10px;
+    transform: translateY(-3px);
+  }
+  .legendImg {
+    padding: 20px;
+    box-shadow: 0px 3px 6px #00000029;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    .line{
+      margin-top: 15px;
+      width: 100%;
+      border-bottom: 1px solid #B7B1A6;
+      margin-bottom: 15px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .imgLegend {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      img {
+        width: 100%;
+        max-width: 180px;
+        height: 66px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .textLegend p {
+      margin: 3px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+  .btnProject {
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    margin: 0;
+    transform: translateY(40px);
+    .btn{
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
 /*----------------------------Queries-------------------------------*/
 
 @media (max-width: 991.98px) {
@@ -48,6 +150,42 @@
     }
     &_divider{
       width: 80%;
+    }
+  }
+  .projects{
+    .title{
+      margin-bottom: 2px;
+      img{
+        margin-right: 10px;
+      }
+    }
+  }
+}
+@media (max-width: 575.98px){
+  .projects{
+    .tam_proj {
+      padding: 0 30px;
+    }
+    .contentImg {
+      img {
+        height: 270px;
+      }
+    }
+    .legendImg{
+      padding: 15px;
+      .line {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .imgLegend {
+        img {
+          max-width: 130px;
+          height: 40px;
+        }
+        p{
+          font-size: 12px;
+        }
+      }
     }
   }
 }
