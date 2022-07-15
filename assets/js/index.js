@@ -123,11 +123,11 @@ var chart = new Chart(ctx, {
     data: {
         labels: ['Vendido', 'No Vendido'],
         datasets: [{
-            label: ['14%','86%'],
+            label: ['27%','73%'],
             backgroundColor: ['#2a1cb7','#cecece'],
             borderColor: '#cecece',
             borderWidth: 0,
-            data: [14,86],
+            data: [27,73],
         }]
     },
     // Configuration options go here
